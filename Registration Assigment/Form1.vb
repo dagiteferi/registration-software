@@ -1,11 +1,11 @@
 ﻿Public Class Form1
-    Private idGenerated As Boolean = False ' Flag to indicate if an ID has been generated
+    Private isGenerated As Boolean = False ' indicate ID has been generated
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbdep.SelectedIndexChanged
         ' Disable the Register button if the department is changed
-        If idGenerated Then
+        If isGenerated Then
             cmdregistred.Enabled = False
-            idGenerated = False
+            isGenerated = False
         End If
     End Sub
 
@@ -15,25 +15,25 @@
 
     Private Sub RadioButton3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles regular.CheckedChanged
         ' Disable the Register button if the division is changed
-        If idGenerated Then
+        If isGenerated Then
             cmdregistred.Enabled = False
-            idGenerated = False
+            isGenerated = False
         End If
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles extension.CheckedChanged
         ' Disable the Register button if the division is changed
-        If idGenerated Then
+        If isGenerated Then
             cmdregistred.Enabled = False
-            idGenerated = False
+            isGenerated = False
         End If
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles weekend.CheckedChanged
         ' Disable the Register button if the division is changed
-        If idGenerated Then
+        If isGenerated Then
             cmdregistred.Enabled = False
-            idGenerated = False
+            isGenerated = False
         End If
     End Sub
 
@@ -42,29 +42,25 @@
     End Sub
 
     Private Sub cmdregistred_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdregistred.Click
-        ' Ensure the ID has been generated
-        If Not idGenerated Then
-            MessageBox.Show("Please generate an ID before registering.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
+        
 
         ' Increment the global student count
-        globalStudentCount += 1
+        StudentCount += 1
 
         ' Proceed with the registration
         MessageBox.Show("Registration successful!", "Registration Complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-        ' Reset the flag for the next user
-        idGenerated = False
+        ' Reset every thing to the defult
+        isGenerated = False
 
         ' Reset the form fields to default values
-        cmbdep.SelectedIndex = 0 ' Assuming index 0 is "Accounting"
+        cmbdep.SelectedIndex = 0
         regular.Checked = True
 
-        ' Set the button text to "Generate ID" after registration
+        ' Set the button text to "Generate ID" 
         cmdid.Text = "Generate ID"
 
-        ' Disable the Register button until a new ID is generated
+        ' Disable the Register button 
         cmdregistred.Enabled = False
     End Sub
 
@@ -75,7 +71,7 @@
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Set default selections when the form loads
-        cmbdep.SelectedIndex = 0 ' Assuming index 0 is "Accounting"
+        cmbdep.SelectedIndex = 0
         regular.Checked = True
 
         ' Disable the Register button initially
@@ -86,22 +82,23 @@
     End Sub
 
     Private Sub GenerateDefaultID()
-        ' Set the default ID to "ACR0000/24"
+        ' Set the default ID 
         Dim departmentCode As String = "AC"
         Dim divisionCode As String = "R"
         Dim studentNumber As String = "0000"
-        Dim registrationYear As String = "24"
+        Dim registrationYear As String = (DateTime.Now.Year Mod 100).ToString("D2")
 
         Dim defaultID As String = String.Format("{0}{1}/{2}/{3}", departmentCode, divisionCode, studentNumber, registrationYear)
         cmdid.Text = defaultID
     End Sub
 
+
     Private Sub GenerateID()
         ' Generate the ID based on the selected criteria 
         Dim departmentCode As String = ""
         Dim divisionCode As String = ""
-        Dim studentNumber As Integer = globalStudentCount + 1 ' Use global student count + 1
-        Dim registrationYear As String = "24" ' Fixed registration year for this example
+        Dim studentNumber As Integer = StudentCount + 1
+        Dim registrationYear As String = (DateTime.Now.Year Mod 100).ToString("D2")
 
         Select Case cmbdep.SelectedItem.ToString()
             Case "Accounting"
@@ -131,7 +128,7 @@
         cmdid.Text = generatedID
 
         ' Set the flag to indicate that an ID has been generated
-        idGenerated = True
+        isGenerated = True
 
         ' Enable the Register button
         cmdregistred.Enabled = True
