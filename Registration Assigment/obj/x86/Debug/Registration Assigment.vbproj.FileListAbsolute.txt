@@ -1,0 +1,18 @@
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\Registration Assigment.vbproj.GenerateResource.Cache
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+C:\Users\Dagi\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\bin\Debug\Registration Assigment.exe
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\bin\Debug\Registration Assigment.pdb
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\bin\Debug\Registration Assigment.xml
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\obj\x86\Debug\Registration Assigment.vbproj.GenerateResource.Cache
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\obj\x86\Debug\Registration Assigment.exe
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\obj\x86\Debug\Registration Assigment.xml
+C:\Users\Dagi\Documents\file\4th 1st all A+\Registration Assigment\Registration Assigment\Registration Assigment\obj\x86\Debug\Registration Assigment.pdb
